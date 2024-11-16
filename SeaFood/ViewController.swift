@@ -9,6 +9,7 @@
 
 
 import UIKit
+import PhotosUI
 import CoreML
 import Vision
 
@@ -17,13 +18,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageView: UIImageView!
     
     let imagePicker = UIImagePickerController()
+    let photoPicker = PHPickerViewController.self
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         imagePicker.delegate = self
-        imagePicker.sourceType = .camera
+//        imagePicker.sourceType = .camera
         imagePicker.allowsEditing = false
     }
     
@@ -34,6 +36,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func cameraTapped(_ sender: Any) {
+        imagePicker.sourceType = .camera
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func galleryTapped(_ sender: Any) {
+        imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
     }
     

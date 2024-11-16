@@ -141,6 +141,8 @@
 				DEVELOPMENT_TEAM = 767JC457LD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SeaFood/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need to access camera to capture photo of the object.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Need to access photo library to pick photo of the object.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -174,6 +176,8 @@
 				DEVELOPMENT_TEAM = 767JC457LD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SeaFood/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need to access camera to capture photo of the object.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Need to access photo library to pick photo of the object.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

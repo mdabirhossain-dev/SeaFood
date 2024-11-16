@@ -31,11 +31,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BST-bz-cmx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="TLq-Yv-pcJ">
-                            <connections>
-                                <action selector="cameraTapped:" destination="BYZ-38-t0r" id="dja-Nv-tvq"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="TLq-Yv-pcJ">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="BYZ-38-t0r" id="dja-Nv-tvq"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="play" id="nUH-Pc-UiB">
+                                <connections>
+                                    <action selector="galleryTapped:" destination="BYZ-38-t0r" id="7Dh-EH-got"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="Nx7-l1-W3c" id="X3K-UY-tPr"/>

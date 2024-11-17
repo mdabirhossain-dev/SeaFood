@@ -16,6 +16,7 @@ import Vision
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var outputLabel: UILabel!
     
     let imagePicker = UIImagePickerController()
     let photoPicker = PHPickerViewController.self
@@ -27,6 +28,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self
 //        imagePicker.sourceType = .camera
         imagePicker.allowsEditing = false
+        
+        outputLabel.text = ""
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -54,7 +57,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             
             print(result)
-            self.title = result[0].identifier
+            self.outputLabel.text = result[0].identifier
         }
         
         let handler = VNImageRequestHandler(ciImage: image)
